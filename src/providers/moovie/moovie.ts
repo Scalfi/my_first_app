@@ -15,6 +15,6 @@ export class MoovieProvider {
   }
 
   getLastesMovies(){
-    return this.http.get(this.path + "/movie/popular?api_key=a51244593eb6d004e676e5c7d3199cec");
-}
+    return this.http.get(this.path + "/movie/popular?api_key=a51244593eb6d004e676e5c7d3199cec&language=pt-BR");
+  }
 }

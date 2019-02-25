@@ -1,3 +1,4 @@
+import { SlidePage } from './../slide/slide';
 import { MoovieProvider } from './../../providers/moovie/moovie';
 import { Component } from '@angular/core';
 
@@ -32,12 +33,12 @@ export class FeedPage {
   public lista_filmes = new Array<any>();
   public nomeUsuario:string = "Scalfi O zica do app";
 
-  constructor(
+  constructor
+  (
     public navCtrl: NavController, 
     public navParams: NavParams,
     private movieProvider: MoovieProvider
-    ) {
-  }
+  ){}
 
   ionViewDidLoad() {
     this.movieProvider.getLastesMovies().subscribe(
@@ -50,5 +51,8 @@ export class FeedPage {
       }
       )
   }
-
+  
+  public returnSlide() {
+    this.navCtrl.push(SlidePage);
+  }
 }
